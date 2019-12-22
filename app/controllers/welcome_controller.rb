@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    puts "Veio nulo ?:   #{@nome.nil?}"
-    @nome.nil? ? @nome = 'Arroz' : @nome = params[:nome]
+    @nome = @nome.nil? ? 'Não foi passado nehum nome' : params[:nome]
   end
 end

@@ -1,7 +1,5 @@
 class CoinsController < ApplicationController
-  before_action :set_coin, only: [:show, :edit, :update, :destroy]
-  @buttonDescription
-
+  before_action :set_coin, only: [:show, :edit, :update, :destroy] 
   # GET /coins
   # GET /coins.json
   def index
@@ -10,18 +8,17 @@ class CoinsController < ApplicationController
 
   # GET /coins/1
   # GET /coins/1.json
-  def show
-  end
+  def show; end
 
   # GET /coins/new
   def new
     @coin = Coin.new
-    @buttonDescription = 'Cadastrar Moeda'
+    @button_description = 'Cadastrar Moeda'
   end
 
   # GET /coins/1/edit
   def edit
-    @buttonDescription = 'Editar Moeda'
+    @button_description = 'Editar Moeda'
   end
 
   # POST /coins
