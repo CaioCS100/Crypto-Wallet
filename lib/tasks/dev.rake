@@ -3,9 +3,7 @@ namespace :dev do
   You must be using the developed environment'
   task setup: :environment do
     if Rails.env.development?
-      unless database_exists
-        show_spinner('Deleting DB...') { %x(rails db:drop:_unsafe) }
-      end
+      show_spinner('Deleting DB...') { %x(rails db:drop:_unsafe) }
       show_spinner('Creating DB...') { %x(rails db:create) }
       show_spinner('Migrating BD...') { %x(rails db:migrate) }
       %x(rails dev:add_coins)
