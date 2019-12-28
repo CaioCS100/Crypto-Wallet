@@ -6,8 +6,8 @@ namespace :dev do
       show_spinner('Deleting DB...') { %x(rails db:drop:_unsafe) }
       show_spinner('Creating DB...') { %x(rails db:create) }
       show_spinner('Migrating BD...') { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else
       show_spinner('Deleting DB...', 'error', 'You must be using the developed environment')
     end
@@ -24,27 +24,32 @@ namespace :dev do
         {
           description: 'Bitcoin',
           acronym: 'BTC',
-          url_image: 'https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg'
+          url_image: 'https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg',
+          mining_type: MiningType.find_by(acronym: 'PoW')
         },
         {
           description: 'Ethereum',
           acronym: 'ETH',
-          url_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5'
+          url_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Real',
           acronym: 'Real',
-          url_image: 'https://ogimg.infoglobo.com.br/in/2912086-6d1-c23/FT1086A/652/xAs-novas-cedulas-de-realDivulgacao.jpg.pagespeed.ic.neOuUUYPT0.jpg'
+          url_image: 'https://ogimg.infoglobo.com.br/in/2912086-6d1-c23/FT1086A/652/xAs-novas-cedulas-de-realDivulgacao.jpg.pagespeed.ic.neOuUUYPT0.jpg',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'Iota',
           acronym: 'IOT',
-          url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png'
+          url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/1720.png',
+          mining_type: MiningType.all.sample
         },
         {
           description: 'ZCash',
           acronym: 'ZEC',
-          url_image: 'https://www.cryptocompare.com/media/351360/zec.png'
+          url_image: 'https://www.cryptocompare.com/media/351360/zec.png',
+          mining_type: MiningType.all.sample
         }
       ]
 
