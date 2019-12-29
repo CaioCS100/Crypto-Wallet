@@ -17,12 +17,10 @@ class CoinsController < ApplicationController
   # GET /coins/new
   def new
     @coin = Coin.new
-    @button_description = 'Cadastrar Moeda'
   end
 
   # GET /coins/1/edit
   def edit
-    @button_description = 'Editar Moeda'
   end
 
   # POST /coins

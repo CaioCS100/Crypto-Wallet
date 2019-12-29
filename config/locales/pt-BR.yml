@@ -1,0 +1,37 @@
+'pt-BR':
+  links:
+    show: Visualizar
+    edit: Editar
+    destroy: Apagar
+    manage_coins: Gerênciar Moedas
+    manage_mining_type: Gerênciar Tipos de Mineração
+    new_coin: Nova Moeda
+    new_mining_type: Novo Tipo de Mineração
+  buttons:
+    confirm: Você tem certeza ?
+  selects:
+    mining_type: Selecione um tipo de Mineração
+  name_of_page:
+    coins: Moedas
+    mining_types: Tipos de Mineração
+  activerecord:
+    models:
+      coin:
+        one: Moeda
+        other: Moedas
+      mining_type:
+        one: Tipo de Mineração
+        other: Tipos de Mineração
+    attributes:
+      coin:
+        description: Descrição
+        acronym: Sigla
+        url_image: Caminho da Imagem
+        mining_type: Tipo de Mineração
+        created_at: Criado em 
+        updated_at: Atualizado em 
+      mining_type:
+        description: Descrição
+        acronym: Sigla
+        created_at: Criado em 
+        updated_at: Atualizado em 
