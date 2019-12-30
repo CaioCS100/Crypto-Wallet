@@ -4,7 +4,7 @@
     edit: Editar
     destroy: Apagar
     manage_coins: Gerênciar Moedas
-    manage_mining_type: Gerênciar Tipos de Mineração
+    manage_mining_types: Gerênciar Tipos de Mineração
     new_coin: Nova Moeda
     new_mining_type: Novo Tipo de Mineração
   buttons:
